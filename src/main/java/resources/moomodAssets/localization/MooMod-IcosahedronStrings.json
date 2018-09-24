@@ -1,0 +1,82 @@
+{
+  "MooMod:Icosahedron_1": {
+    "DESCRIPTION": "Natural One.",
+    "NAME": "1"
+  },
+  "MooMod:Icosahedron_10": {
+    "DESCRIPTION": "Add a Mulligan to your hand.",
+    "NAME": "10"
+  },
+  "MooMod:Icosahedron_11": {
+    "DESCRIPTION": "Gain 100 Gold.",
+    "NAME": "11"
+  },
+  "MooMod:Icosahedron_12": {
+    "DESCRIPTION": "Gain a random common potion.",
+    "NAME": "12"
+  },
+  "MooMod:Icosahedron_13": {
+    "DESCRIPTION": "Gain 3 Artifact.",
+    "NAME": "13"
+  },
+  "MooMod:Icosahedron_14": {
+    "DESCRIPTION": "Gain 1 Strength, 1 Dexterity, and 1 Focus.",
+    "NAME": "14"
+  },
+  "MooMod:Icosahedron_15": {
+    "DESCRIPTION": "Draw 1 additional card each turn.",
+    "NAME": "15"
+  },
+  "MooMod:Icosahedron_16": {
+    "DESCRIPTION": "Gain a random rare potion.",
+    "NAME": "16"
+  },
+  "MooMod:Icosahedron_17": {
+    "DESCRIPTION": "Choose 1 of 3 rare cards to add to your hand.",
+    "NAME": "17"
+  },
+  "MooMod:Icosahedron_18": {
+    "DESCRIPTION": "At the start of each turn, gain [E].",
+    "NAME": "18"
+  },
+  "MooMod:Icosahedron_19": {
+    "DESCRIPTION": "Heal to full.",
+    "NAME": "19"
+  },
+  "MooMod:Icosahedron_2": {
+    "DESCRIPTION": "Lose 10 HP.",
+    "NAME": "2"
+  },
+  "MooMod:Icosahedron_20": {
+    "DESCRIPTION": "Natural Twenty.",
+    "NAME": "20"
+  },
+  "MooMod:Icosahedron_3": {
+    "DESCRIPTION": "Add 3 Void to your draw pile.",
+    "NAME": "3"
+  },
+  "MooMod:Icosahedron_4": {
+    "DESCRIPTION": "Draw 1 less card each turn.",
+    "NAME": "4"
+  },
+  "MooMod:Icosahedron_5": {
+    "DESCRIPTION": "Increase the cost of cards in your hand by 1 this combat.",
+    "NAME": "5"
+  },
+  "MooMod:Icosahedron_6": {
+    "DESCRIPTION": "Gain 5 Vulnerable.",
+    "NAME": "6"
+  },
+  "MooMod:Icosahedron_7": {
+    "DESCRIPTION": "Gain 5 Frail.",
+    "NAME": "7"
+  },
+  "MooMod:Icosahedron_8": {
+    "DESCRIPTION": "Gain 5 Weak.",
+    "NAME": "8"
+  },
+  "MooMod:Icosahedron_9": {
+    "DESCRIPTION": "Lose 50 Gold.",
+    "NAME": "9"
+  }
+}

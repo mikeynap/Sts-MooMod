@@ -1,0 +1,51 @@
+{
+  "MooMod:MonsterLightning": {
+    "NAME": "Lightning",
+    "DESCRIPTION": [
+      "#yEvoke: Deal #b",
+      " damage."
+    ]
+  },
+  "MooMod:MonsterFrost": {
+    "NAME": "Frost",
+    "DESCRIPTION": [
+      "#yEvoke: Gain #b",
+      " #yBlock."
+    ]
+  },
+  "MooMod:MonsterMiasma": {
+    "NAME": "Miasma",
+    "DESCRIPTION": [
+      "#yEvoke: Apply #b",
+      " Weak, #b",
+      " Vulnerable, and #b",
+      " Frail."
+    ]
+  },
+  "MooMod:MonsterFocusing": {
+    "NAME": "Focusing",
+    "DESCRIPTION": [
+      "#yEvoke: Gain #b",
+      " Focus."
+    ]
+  },
+  "MooMod:MonsterHypnotic": {
+    "NAME": "Hypnotic",
+    "DESCRIPTION": [
+      "#yEvoke: Apply Befuddled. NL NL #yBefuddled: The first card drawn each turn is transformed."
+    ]
+  },
+  "MooMod:MonsterDraining": {
+    "NAME": "Draining",
+    "DESCRIPTION": [
+      "#yEvoke: Add #b",
+      " #yDazed to your draw pile."
+    ]
+  },
+  "MooMod:MonsterWarp": {
+    "NAME": "Warp",
+    "DESCRIPTION": [
+      "#yEvoke: Calls forth another monster from the spire."
+    ]
+  }
+}

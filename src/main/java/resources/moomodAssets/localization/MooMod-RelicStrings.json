@@ -1,0 +1,351 @@
+{
+  "MooMod:Icosahedron": {
+    "NAME": "Runic Icosahedron",
+    "FLAVOR": "Twisting fate, 1d20 at a time.",
+    "DESCRIPTIONS": [
+      "Once per combat, you may roll the Icosahedron.",
+      " NL You may no longer roll the Icosahedron.",
+      "You are #rCursed.",
+      "Gain [E] at the start of each turn."
+    ]
+  },
+  "MooMod:BlackHole": {
+    "NAME": "Black Hole",
+    "FLAVOR": "While consuming everything you put into it, it radiates a strange energy.",
+    "DESCRIPTIONS": [
+      "All cards cost #b0. NL Any card entering your discard pile is exhausted."
+    ]
+  },
+  "MooMod:VirtuousBlindfold": {
+    "NAME": "Virtuous Blindfold",
+    "FLAVOR": "Emotions are prohibited.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn. You can no longer see the entire map."
+    ]
+  },
+  "MooMod:PeanutButter": {
+    "NAME": "Peanut Butter",
+    "FLAVOR": "If it pronounced gif or gif?",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b",
+      " #yTemporary HP."
+    ]
+  },
+  "MooMod:CuriousFeather": {
+    "NAME": "Curious Feather",
+    "FLAVOR": "You can't help but feel curious about the world while holding this feather.",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower, gain #b1 #yStrength."
+    ]
+  },
+  "MooMod:Metronome": {
+    "NAME": "Metronome",
+    "FLAVOR": "Stronger and Stronger.",
+    "DESCRIPTIONS": [
+      "Increases #yStrength for each sequential #yAttack played. Playing a #yNon-Attack card or taking damage resets the bonus to #b0.",
+      " NL You get #b",
+      " #yStrength from this."
+    ]
+  },
+  "MooMod:CrystalFace": {
+    "NAME": "Crystalline Mask",
+    "FLAVOR": "Scary.",
+    "DESCRIPTIONS": [
+      "Enemies start combat with #b",
+      "% less HP."
+    ]
+  },
+  "MooMod:FunFungus": {
+    "NAME": "Fun Fungus",
+    "FLAVOR": "If you remain still, this fungus will grow into your wounds and healing them.",
+    "DESCRIPTIONS": [
+      "If you do not play any #yAttacks during your turn, heal #b",
+      " HP at the start of your next turn."
+    ]
+  },
+  "MooMod:CrackedHourglass": {
+    "NAME": "Cracked Hourglass",
+    "FLAVOR": "Your time is running out...",
+    "DESCRIPTIONS": [
+      " If any battle takes longer than #b",
+      " minutes, you #rdie.",
+      "Gain [E] at the start of each turn."
+    ]
+  },
+  "MooMod:ScarierMask": {
+    "NAME": "Scarier Mask",
+    "FLAVOR": "Scary.",
+    "DESCRIPTIONS": [
+      "The weakest enemy flees at the beginning of multi-enemy fights."
+    ]
+  },
+  "MooMod:DeadTorch": {
+    "NAME": "Dead Torch",
+    "FLAVOR": "Emits a soft, blue light that attracts the souls of the dead.",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust a card, gain #b1 Max HP."
+    ]
+  },
+  "MooMod:BottledHeart": {
+    "NAME": "Bottled Heart",
+    "FLAVOR": "Your own heart in a bottle. Still beating.",
+    "DESCRIPTIONS": [
+      "Upon pickup, this relic gains charge equal to half your Max HP and your Max HP is reduced to #b1. NL Start each combat with #yTemporary HP equal to this relic's charge. NL Any changes to Max HP affect this instead.",
+      " NL #ySynergy: ",
+      "If you have the ",
+      ", this gains an additional #b",
+      " charges."
+    ]
+  },
+  "MooMod:DisguiseKit": {
+    "NAME": "Cunning Disguise",
+    "FLAVOR": "Absolutely no one could possibly recognize you while you're wearing this disguise.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose another character. On future Card Reward screens you have #y1 additional card to choose from that will be from ",
+      "that character.",
+      "."
+    ]
+  },
+  "MooMod:Teleporter": {
+    "NAME": "Short Range Teleporter",
+    "FLAVOR": "A prototype teleporter from before the Spireblight. No one knows how it works anymore.",
+    "DESCRIPTIONS": [
+      "You may skip rooms, instead entering a room two floors away. NL Has #b",
+      " charge",
+      " charges",
+      ". Kill Bosses or Elites to regain charges."
+    ]
+  },
+  "MooMod:MysteriousPyramids": {
+    "NAME": "Mysterious Pyramids",
+    "FLAVOR": "Usually they come in sets of four.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose two cards. Whenever you draw one of these cards, draw the other.",
+      "Choose two cards for ",
+      "Whenever you draw ",
+      " or ",
+      ", draw the other."
+    ]
+  },
+  "MooMod:AstralHammer": {
+    "NAME": "Astral Hammer",
+    "FLAVOR": "\"Forged in the heart of celestial fire. Powered by lasers entwined in a star. Crystal enchantment of steel.\"",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yAttack, reduce its cost by #b1 for the rest of combat. Playing an #yAttack that costs #b0 #yExhausts it."
+    ]
+  },
+  "MooMod:PrototypeTalaria": {
+    "NAME": "Prototype Talaria",
+    "FLAVOR": "Too heavy to achieve real flight.",
+    "DESCRIPTIONS": [
+      "Reduce damage taken from the first #yAttack of each combat by #b50%."
+    ]
+  },
+  "MooMod:Spice": {
+    "NAME": "Spice",
+    "FLAVOR": "Must flow.",
+    "DESCRIPTIONS": [
+      "Upon pickup, raise your Max HP by #b8. NL Draw #b1 additional card each turn. NL #rWarning: Highly addictive!",
+      "#pOne #pmore #pcouldn't #phurt. NL Upon pickup, raise your Max HP by #b8. NL Start each combat with #b1 #yDexterity.",
+      "#pJust #pone #pmore #phit... NL Upon pickup, #rlower your Max HP by #b8. NL Start each combat with #b1 #yStrength and #b2 #yDexterity.",
+      "#pMORE NL Upon pickup, #rlower your Max HP by #b8. NL Increase your starting #yStrength by #b1.",
+      "Max HP #b+",
+      "Max HP #r",
+      ". NL Draw #b1 additional card each turn.",
+      " NL Start each combat with #b",
+      " #yStrength and #b",
+      " #yDexterity.",
+      " NL #rWarning: Highly Addictive!"
+    ]
+  },
+  "MooMod:TinFlute": {
+    "NAME": "Tin Flute",
+    "FLAVOR": "It feels like you've seen this before.",
+    "DESCRIPTIONS": [
+      "At the end of this run, choose one card in your deck. You start your next run with that card in your deck."
+    ]
+  },
+  "MooMod:GlazedTorus": {
+    "NAME": "Glazed Torus",
+    "FLAVOR": "Not actually edible.",
+    "DESCRIPTIONS": [
+      "Gain #b1 #yStrength at the end of each of your odd numbered turns."
+    ]
+  },
+  "MooMod:Backtick": {
+    "NAME": "Backtick",
+    "FLAVOR": " relic add ",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose any non-boss non-event relic to obtain."
+    ]
+  },
+  "test447": {
+    "NAME": "test447",
+    "FLAVOR": "TODO",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn."
+    ]
+  },
+  "MooMod:BundleOfHerbs": {
+    "NAME": "Bundle of Herbs",
+    "FLAVOR": "A collection of healing herbs: sage, thyme, greenwarish, rosemary.",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Right [#2aecd7]click [#2aecd7]during [#2aecd7]combat [#2aecd7]to [#2aecd7]activate.[] NL Lose #b1 charge, gain #b",
+      " #yRegen. NL Whenever you enter a Rest Site, add #b",
+      " charges. NL Starts with #b",
+      " charges."
+    ]
+  },
+  "MooMod:SphereOfDissonance": {
+    "NAME": "Sphere of Dissonance",
+    "FLAVOR": "You are your own worst enemy.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, apply #b",
+      " #yVulnerable to a random enemy. NL #ySynergy: ",
+      "If you have the ",
+      ", whenever you enter a #y? room, heal #b",
+      " HP."
+    ]
+  },
+  "MooMod:Stopwatch": {
+    "NAME": "Stopwatch",
+    "FLAVOR": "Maybe time's just a construct of human perception, an illusion created by—",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Right [#2aecd7]click [#2aecd7]during [#2aecd7]combat [#2aecd7]to [#2aecd7]activate.[] NL Lose #b1 charge. At the end of your turn, immediately start another turn. Energy and #yBlock are maintained between these turns. NL Starts with #b",
+      " charges."
+    ]
+  },
+  "MooMod:HerbalPaste": {
+    "NAME": "Herbal Paste",
+    "FLAVOR": "A fowl smelling substance. Perhaps slathering it on your skin will heal your wounds.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b",
+      " #yRegen. NL #yRegen can go negative."
+    ]
+  },
+  "MooMod:MedicalManual": {
+    "NAME": "Medical Manual",
+    "FLAVOR": "\"It's Spireblight.\"",
+    "DESCRIPTIONS": [
+      "#yExhaust the first #yStatus drawn each turn. NL #ySynergy: ",
+      "If you have the ",
+      ", each #yStatus played heals you #b",
+      " HP."
+    ]
+  },
+  "MooMod:ClockworkCow": {
+    "NAME": "Clockwork Cow",
+    "FLAVOR": "\"Moo.\"",
+    "DESCRIPTIONS": [
+      "Cards can cycle one additional time per turn."
+    ]
+  },
+  "MooMod:HollowSoul": {
+    "NAME": "Hollow Soul",
+    "FLAVOR": "An echo of a past life. Perhaps with this you may become whole.",
+    "DESCRIPTIONS": [
+      "When you would die in combat, immediately restart the fight with #b",
+      "% Max HP. NL Regain your original Max HP and recharge this relic if you win the fight."
+    ]
+  },
+  "MooMod:CrystalStatue": {
+    "NAME": "Crystal Statue",
+    "FLAVOR": "The slightest touch could shatter it.",
+    "DESCRIPTIONS": [
+      "Broken.",
+      " Breaks after you take #b",
+      " unblocked #yAttack damage.",
+      "Gain [E] at the start of each turn."
+    ]
+  },
+  "MooMod:RGBLights": {
+    "NAME": "RGB Lights",
+    "FLAVOR": "More colors makes it run faster.",
+    "DESCRIPTIONS": [
+      "Every time you Evoke #b",
+      " Orbs in a single turn, Evoke the third Orb #b",
+      " times."
+    ]
+  },
+  "MooMod:DustyCowl": {
+    "NAME": "Dusty Cowl",
+    "FLAVOR": "An old cowl that seems to collect dust and other ",
+    "DESCRIPTIONS": [
+      "Whenever an #yEthereal card is #yExhausted, gain #b",
+      " Block."
+    ]
+  },
+  "MooMod:BottledRain": {
+    "NAME": "Bottled Rain",
+    "FLAVOR": "Petrichor.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a card. This card will always #yRetain.",
+      "Choose a card for ",
+      " will always #yRetain."
+    ]
+  },
+  "MooMod:Zylophone": {
+    "NAME": "Zylophone",
+    "FLAVOR": "[RED]C C [CYAN]G G [PURPLE]A A [CYAN]G [GREEN]F F [YELLOW]E E [ORANGE]D D [RED]C[]",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a #b0 or #b1 cost card. This card now costs #bX, applying its effect #bX times when played.",
+      "Choose a card for ",
+      " is now #bX cost."
+    ]
+  },
+  "MooMod:EmptyBottle": {
+    "NAME": "Empty Bottle",
+    "FLAVOR": "Just pour half the potion into this bottle and suddenly you have two potions!",
+    "DESCRIPTIONS": [
+      "Potions may be used twice."
+    ]
+  },
+  "MooMod:DuctTape": {
+    "NAME": "Duct Tape",
+    "FLAVOR": "Fix anything.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #b2 cards and combine them.",
+      "Choose two cards for "
+    ]
+  },
+  "MooMod:MobiusCoin": {
+    "NAME": "Möbius Coin",
+    "FLAVOR": "An inscription on the back reads: \"Porrprety of Blnak The Eivl.\"",
+    "DESCRIPTIONS": [
+      "Gain an additional #b",
+      " #yGold every time you complete a quest."
+    ]
+  },
+  "MooMod:BloodyCrown": {
+    "NAME": "Bloody Crown",
+    "FLAVOR": "\"FLÄSHYN\"",
+    "DESCRIPTIONS": [
+      "Gain [E] [E] at the start of each turn. NL More enemies. NL #rMore #rblood."
+    ]
+  },
+  "MooMod:BallOfYels": {
+    "NAME": "Ball of Yels",
+    "FLAVOR": "At least they're not in your hovercraft.",
+    "DESCRIPTIONS": [
+      "Whenever you #yChannel a #yLightning, trigger its passive ability."
+    ]
+  },
+  "MooMod:OldNail": {
+    "NAME": "Old Nail",
+    "FLAVOR": "Blunt with age and wear.",
+    "DESCRIPTIONS": [
+      "Perhaps it can be reforged...",
+      "Pure Nail",
+      "Crafted to perfection.",
+      "Attacks deal double damage."
+    ]
+  },
+  "MooMod:NiceRug": {
+    "NAME": "Nice Rug",
+    "FLAVOR": "You killed a nice, blue merchant for this. That wasn't very nice of you.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b1 #yPlated #yArmor for every #b",
+      " #yGold you have."
+    ]
+  }
+}
