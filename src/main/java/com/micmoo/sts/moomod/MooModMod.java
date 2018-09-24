@@ -1,24 +1,32 @@
 package com.micmoo.sts.moomod;
 
 import basemod.BaseMod;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.micmoo.sts.moomod.cards.blue.PowerShift;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.micmoo.sts.moomod.cards.blue.Firewall;
 import com.micmoo.sts.moomod.cards.blue.LoadBalancer;
 import com.micmoo.sts.moomod.cards.blue.MultiRecursion;
 import com.micmoo.sts.moomod.cards.blue.OrbDrain;
-import com.micmoo.sts.moomod.cards.blue.ZenForm;
+import com.micmoo.sts.moomod.cards.blue.PowerShift;
 import com.micmoo.sts.moomod.cards.blue.Sandbox;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import com.micmoo.sts.moomod.cards.blue.ZenForm;
+import com.micmoo.sts.moomod.relics.Darkness;
+import com.micmoo.sts.moomod.relics.GoldenOrbs;
+import com.micmoo.sts.moomod.relics.PowerPots;
+import com.micmoo.sts.moomod.relics.SandboxRelic;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.util.Properties;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @SpireInitializer
 public class MooModMod implements
@@ -29,22 +37,20 @@ public class MooModMod implements
         EditStringsSubscriber,
         PostDeathSubscriber,
         StartGameSubscriber,
-        MaxHPChangeSubscriber
-{
-    public static final boolean IS_DEBUG = false;
+        MaxHPChangeSubscriber {
+
+    public static final boolean IS_DEBUG = true;
     public static final Logger logger = LogManager.getLogger(MooModMod.class.getSimpleName());
 
     private static SpireConfig modConfig = null;
 
     // Beta card asset paths
     public static final String BETA_ATTACK = MooModMod.assetPath("images/cards/replayBetaAttack.png");
-    public static final String BETA_SKILL  = MooModMod.assetPath("images/cards/replayBetaSkill.png");
-    public static final  String BETA_POWER  = MooModMod.assetPath("images/cards/replayBetaPower.png");
+    public static final String BETA_SKILL = MooModMod.assetPath("images/cards/replayBetaSkill.png");
+    public static final String BETA_POWER = MooModMod.assetPath("images/cards/replayBetaPower.png");
+    public static final String BETA_RELIC = "betaRelic.png";
 
-
-
-    public static void initialize()
-    {
+    public static void initialize() {
         BaseMod.subscribe(new MooModMod());
 
         try {
@@ -56,13 +62,11 @@ public class MooModMod implements
         }
     }
 
-    public static String assetPath(String path)
-    {
+    public static String assetPath(String path) {
         return path;
     }
 
-    public static boolean startingMooMod()
-    {
+    public static boolean startingMooMod() {
         if (modConfig == null) {
             return true;
         }
@@ -70,8 +74,7 @@ public class MooModMod implements
         return modConfig.getBool("startingMooMod");
     }
 
-    public static void loadData()
-    {
+    public static void loadData() {
         logger.info("Loading Save Data");
         try {
             SpireConfig config = new SpireConfig("MooMod", "SaveData");
@@ -84,25 +87,24 @@ public class MooModMod implements
             EmptyBottle.load(config);
             DuctTape.load(config);
 
-            */
+             */
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void saveData()
-    {
+    public static void saveData() {
         logger.info("Saving Data");
         try {
             SpireConfig config = new SpireConfig("MooMod", "SaveData");
-                      /* MNTODO: load logic here
+            /* MNTODO: load logic here
 
             BottledRain.save(config);
             DisguiseKit.save(config);
             MysteriousPyramids.save(config);
             Zylophone.save(config);
             EmptyBottle.save(config);
-            */
+             */
             // Duct Tape saving is handled separately
             config.save();
         } catch (IOException e) {
@@ -110,8 +112,7 @@ public class MooModMod implements
         }
     }
 
-    public static void clearData()
-    {
+    public static void clearData() {
         logger.info("Clearing Saved Data");
         try {
             SpireConfig config = new SpireConfig("MooMod", "SaveData");
@@ -124,22 +125,21 @@ public class MooModMod implements
             MysteriousPyramids.clear();
             Zylophone.clear();
             EmptyBottle.clear();
-*/
+             */
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    public void receiveStartGame()
-    {
+    public void receiveStartGame() {
         loadData();
-        System.out.printf("mn: FloorNum %d %b %d", AbstractDungeon.floorNum, IS_DEBUG,AbstractDungeon.player.masterDeck.size() );
-        if (IS_DEBUG && AbstractDungeon.floorNum == 0 && AbstractDungeon.player.masterDeck.size() == 10){ 
-             AbstractDungeon.player.masterDeck.addToBottom(new Sandbox());
-             AbstractCard c = new Sandbox();
-             c.upgrade();
-             AbstractDungeon.player.masterDeck.addToBottom(c);
+        if (IS_DEBUG && AbstractDungeon.floorNum == 0 && AbstractDungeon.player.masterDeck.size() == 10) {
+            AbstractDungeon.player.masterDeck.addToBottom(new Sandbox());
+            AbstractCard c = new Sandbox();
+            c.upgrade();
+            AbstractDungeon.player.masterDeck.addToBottom(c);
+            AbstractDungeon.player.getRelic(SandboxRelic.ID);
         }
         /*
         if (AbstractDungeon.floorNum <= 1 && CardCrawlGame.dungeon instanceof Exordium) {
@@ -152,13 +152,12 @@ public class MooModMod implements
     }
 
     @Override
-    public void receivePostInitialize()
-    {
+    public void receivePostInitialize() {
         //ModPanel settingsPanel = new ModPanel();
         /* MNTODO: Load Image */
         //BaseMod.registerModBadge(ImageMaster.loadImage(assetPath("images/MooMod/modBadge.png")), "MooMod", "kiooeht", "TODO", settingsPanel);
         /* MNTODO: Load Events */
-        /*
+ /*
         BaseMod.addEvent(TheFatedDie.ID, TheFatedDie.class);
         BaseMod.addEvent(Experiment.ID, Experiment.class, TheCity.ID);
         // Only appears if player has Bottle relic. See TheBottlerPatch
@@ -170,12 +169,11 @@ public class MooModMod implements
 
         BaseMod.addBoss(TheBeyond.ID, GrandSnecko.ID, assetPath("images/ui/map/boss/grandSnecko.png"), assetPath("images/ui/map/bossOutline/grandSnecko.png"));
         BaseMod.addBoss(TheCity.ID, MusketHawk.ID, assetPath("images/ui/map/boss/musketHawk.png"), assetPath("images/ui/map/bossOutline/musketHawk.png"));
-    */
+         */
     }
 
     @Override
-    public void receivePostDeath()
-    {
+    public void receivePostDeath() {
         /*
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(TinFlute.ID)) {
             TinFlute flute = (TinFlute) AbstractDungeon.player.getRelic(TinFlute.ID);
@@ -184,8 +182,7 @@ public class MooModMod implements
     }
 
     @Override
-    public void receiveEditCards()
-    {
+    public void receiveEditCards() {
         System.out.println("receiveEditCards...");
 
         try {
@@ -195,11 +192,45 @@ public class MooModMod implements
         }
     }
 
+    public String readThing(InputStreamReader in) throws UnsupportedEncodingException, IOException {
+
+        final int bufferSize = 10240;
+        final char[] buffer = new char[bufferSize];
+        final StringBuilder out = new StringBuilder();
+        for (;;) {
+            int rsz = in.read(buffer, 0, buffer.length);
+            if (rsz < 0) {
+                break;
+            }
+            out.append(buffer, 0, rsz);
+        }
+        return out.toString();
+
+    }
+
+    public void addUnlockRelic(AbstractRelic relic, RelicType type) {
+        BaseMod.addRelic(relic, type);
+        UnlockTracker.addRelic(relic.relicId);
+    }
+
     @Override
-    public void receiveEditRelics()
-    {
+    public void receiveEditRelics() {
+
+        if (IS_DEBUG) {
+            addUnlockRelic(new SandboxRelic(), RelicType.SHARED);
+        }
+
+        addUnlockRelic(
+                new Darkness(), RelicType.BLUE);
+        addUnlockRelic(
+                new GoldenOrbs(), RelicType.BLUE);
+
+        addUnlockRelic(
+                new PowerPots(), RelicType.SHARED);
+
+
         /* MNTODO: AddRelics */
-        /*
+ /*
         BaseMod.addRelic(new Icosahedron(), RelicType.SHARED);
         BaseMod.addRelic(new BlackHole(), RelicType.SHARED);
         BaseMod.addRelic(new VirtuousBlindfold(), RelicType.SHARED);
@@ -248,17 +279,15 @@ public class MooModMod implements
         if (hasInfiniteSpire) {
             BaseMod.addRelic(new MobiusCoin(), RelicType.SHARED);
         }
-    */
+         */
     }
 
     @Override
-    public void receiveEditKeywords()
-    {
+    public void receiveEditKeywords() {
     }
 
     @Override
-    public void receiveEditStrings()
-    {
+    public void receiveEditStrings() {
         /* MNTODO: LocalizationString
         BaseMod.loadCustomStringsFile(RelicStrings.class, assetPath("localization/MooMod-RelicStrings.json"));
         BaseMod.loadCustomStringsFile(CardStrings.class, assetPath("localization/MooMod-CardStrings.json"));
@@ -266,32 +295,32 @@ public class MooModMod implements
         BaseMod.loadCustomStringsFile(OrbStrings.class, assetPath("localization/MooMod-OrbStrings.json"));
         BaseMod.loadCustomStringsFile(PowerStrings.class, assetPath("localization/MooMod-PowerStrings.json"));
         BaseMod.loadCustomStringsFile(EventStrings.class, assetPath("localization/MooMod-EventStrings.json"));
- */
-    }
-    void AddAndUnlockCard(AbstractCard c)
-    {
-	BaseMod.addCard(c);
-	UnlockTracker.unlockCard(c.cardID);
+         */
     }
 
-    private void autoAddCards() throws URISyntaxException, ClassNotFoundException, IllegalAccessException, InstantiationException
-    {
+    void AddAndUnlockCard(AbstractCard c) {
+        BaseMod.addCard(c);
+        UnlockTracker
+                .unlockCard(c.cardID);
+
+    }
+
+    private void autoAddCards() throws URISyntaxException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         AddAndUnlockCard(new PowerShift());
         AddAndUnlockCard(new OrbDrain());
         AddAndUnlockCard(new ZenForm());
         AddAndUnlockCard(new MultiRecursion());
         AddAndUnlockCard(new LoadBalancer());
         AddAndUnlockCard(new Firewall());
-        
-        if (IS_DEBUG){
+
+        if (IS_DEBUG) {
             AddAndUnlockCard(new Sandbox());
+
         }
     }
-    
 
     @Override
-    public int receiveMapHPChange(int amount)
-    {
+    public int receiveMapHPChange(int amount) {
         /*if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(BottledHeart.ID)) {
             BottledHeart relic = (BottledHeart) AbstractDungeon.player.getRelic(BottledHeart.ID);
             return relic.onMaxHPChange(amount);

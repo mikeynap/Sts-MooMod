@@ -32,7 +32,7 @@ extends CustomCard {
         
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
         		AbstractCard.CardType.POWER, AbstractCard.CardColor.BLUE,
-        		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        		AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 
         this.magicNumber = this.baseMagicNumber = AMOUNT;
         
